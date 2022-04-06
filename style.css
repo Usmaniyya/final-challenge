@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap');
 *,
 *::before,
 *::after {
@@ -8,6 +9,7 @@
 
 body {
     font-size: 1rem;
+    font-family: 'Oswald', sans-serif;
 }
 
 a {
@@ -23,7 +25,9 @@ img {
 }
 
 p {
-    line-height: 1.7;
+    line-height: 1.8;
+    font-weight: 200;
+    font-size: 21px;
 }
 
 .row {
@@ -33,10 +37,11 @@ p {
 
 .col {
     width: 100%;
+    margin-bottom: 1rem;
 }
 
 .col+.col {
-    margin-left: 4rem;
+    margin-left: 5rem;
 }
 
 span {
@@ -46,6 +51,8 @@ span {
 h2 {
     color: #A59678;
     margin-bottom: .5rem;
+    font-weight: bold;
+    font-size: 36px;
 }
 
 .container {
@@ -55,7 +62,7 @@ h2 {
 }
 
 header {
-    height: 60px;
+    height: 65px;
     background-color: #2E323F;
     width: 100%;
 }
@@ -67,12 +74,6 @@ nav {
     padding: .75rem 0;
 }
 
-.nav_list {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-}
-
 .nav_link {
     text-transform: uppercase;
     color: #fff;
@@ -80,12 +81,16 @@ nav {
 
 .nav_link_button {
     background-color: #A59678;
-    padding: .5rem 1rem;
+    padding: .5rem 1.5rem;
     border-radius: 50px;
 }
 
-section,
-footer {
+.nav_link_button:focus,
+.nav_link_button:hover {
+    opacity: .75;
+}
+
+section {
     padding: 100px 0;
 }
 
@@ -106,18 +111,20 @@ footer {
 }
 
 .section_two h3 {
+    font-size: 24px;
     margin-bottom: 1rem;
     color: #A59678;
 }
 
 .section_title {
     font-size: 90px;
+    font-weight: bold;
     color: #fff;
 }
 
 .section_text {
     color: #fff;
-    font-size: 18px;
+    font-size: 24px;
     margin-bottom: 2rem;
 }
 
@@ -138,12 +145,110 @@ footer {
     text-transform: uppercase;
 }
 
+.btn:hover,
+.btn:focus {
+    opacity: .75;
+}
+
 .card {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
     background-color: #3B4050;
     color: #fff;
     padding: 2rem 1rem;
-    margin-block: 1rem;
     text-align: center;
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+}
+
+.card h2 {
+    color: #fff;
+    font-weight: bold;
+}
+
+.section_four {
+    padding: 50px 0;
+}
+
+.section_four h3 {
+    color: #A59678;
+    margin-bottom: .75rem;
+    font-size: 21px;
+}
+
+.section_four .row p,
+a,
+li {
+    color: #fff;
+}
+
+.section_four ul li {
+    padding: .5rem 0;
+}
+
+.title {
+    color: #fff;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    header {
+        text-align: center;
+        height: auto;
+    }
+    nav {
+        flex-direction: column;
+    }
+    .row {
+        display: block;
+    }
+    .col+.col {
+        margin-left: 0;
+    }
+    .card {
+        margin-top: 2rem;
+        margin-left: 0;
+    }
+    .section_title {
+        font-size: 4rem;
+    }
+    .nav_list {
+        display: block;
+        margin: 1rem 0;
+    }
+    .nav_item {
+        margin-block: .75rem;
+    }
+    .section_four {
+        text-align: center;
+    }
+    .cols {
+        gap: 10px;
+    }
+    .card+.card {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+    .section_title {
+        font-size: 4.5rem;
+    }
+    .section_three .row {
+        flex-direction: column;
+        width: 100%;
+    }
+    .cols {
+        display: flex;
+    }
+    .card {
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+    .card+.card {
+        margin-left: 1rem;
+    }
 }
