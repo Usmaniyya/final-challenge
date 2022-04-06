@@ -74,6 +74,63 @@ nav {
     padding: .75rem 0;
 }
 
+.nav_toggle {
+    display: none;
+}
+
+.nav_toggle {
+    cursor: pointer;
+    border: none;
+    width: 3em;
+    height: 3em;
+    padding: 0em;
+    border-radius: 50%;
+    background-color: #072A2D;
+    color: #fff;
+    transition: opacity 250ms ease;
+    position: absolute;
+    left: 0;
+}
+
+.nav_toggle:focus,
+.nav_toggle:hover {
+    opacity: .75;
+}
+
+.hamburger {
+    width: 50%;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    background-color: #fff;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    width: 100%;
+}
+
+.hamburger::before {
+    transform: translateY(-6px);
+}
+
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+.nav_list {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
 .nav_link {
     text-transform: uppercase;
     color: #fff;
